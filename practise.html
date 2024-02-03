@@ -1,0 +1,376 @@
+<!-- <html> 
+<head>
+<title> Moving Elements </title>
+<script type="text/javascript">
+function moveIt()
+{
+image=document.getElementById("python").style;
+x=document.myform.xcoord.value;
+y=document.myform.ycoord.value;
+image.top=x;
+image.left=y;
+}
+</script>
+</head>
+<body>
+<form name="myform">
+<label> X - Cooridnate</label>
+<input type="text" id="xcoord" size="3"/>
+<br/><br/>
+<label> Y - Cooridnate</label>
+<input type="text" id="ycoord" size="3"/>
+<br/><br/>
+<input type="button" value="Move It" onclick="moveIt()" />
+</form>
+<img id="python" src="aka.jpg" style="position:absolute; top:120; left:20"
+height="200px" width="200px" />
+</body>
+</html -->
+
+<!-- ex-2
+
+<html>
+<head>
+<title> Changing Colors </title>
+<script type="text/javascript">
+function changeback()
+{
+newColor=document.cform.background.value;
+document.body.style.backgroundColor=newColor;
+}
+function changefore()
+{
+newColor=document.cform.foreground.value;
+document.body.style.color=newColor;
+}
+</script>
+</head>
+<body>
+<p style="fontfamily:Times; font-style:italic; font-size:e2em;">
+This small page illustrated dynamic setting of the
+foregroung and backgorund colors for a document
+</p>
+<form name="cform">
+<label> Background Color </label>
+<input type="text" name="background" size="10" onchange="changeback()" />
+<br/><br/>
+<label> Foreground Color </label>
+<input type="text" name="foreground" size="10" onchange="changefore()" />
+</form>
+</body>
+</html>-->
+
+<!-- ex-3 
+
+<html> <head> <title> Changing Font Colors </title>
+    <style type="text/css">
+    .regText{ font: 1.1em 'Times New Roman'; }
+    .wordText{ color:blue; }
+    </style> </head>
+    <body>
+    <p class="regText"> The
+    state of
+    <span class="wordText"; onmouseover="
+    this.style.color='red';
+    this.style.fontStyle='italic';
+    this.style.fontSize='2em'; ";
+    onmouseout=" this.style.color='blue';
+    this.style.fontStyle='normal';
+    this.style.fontSize='1.1em'; "; >
+    Jammu & Kashmir
+     </span> produces many of our nation's Apples </p> </body> </html> -->
+
+     <!-- ex-4 -->
+
+     <!-- <html> 
+        <head>
+        <title> alert box </title>
+        <script language="JavaScript"> 
+        function add( )
+        {
+            a=20; b=40;
+            c=a+b;
+            window.alert("This is for addition of 2 no's"); document.write("Result is: "+c);
+        }
+        </script>
+        </head>
+       
+        <body onload="add( )">
+        </body>
+         </html> -->
+
+    <!-- ex-5 
+
+    <HTML>
+        <HEAD>
+        <TITLE> Confirm </TITLE>
+        <script> function sub( )
+        {
+        a=50; b=45;
+        c=a-b;
+        x=window.confirm("Do you want to see subtraction of numbers") ; 
+        if(x==true)
+        {
+            document.write("result is :"+c);
+        }
+        else
+        {
+            document.write("you clicked cancel button");
+        }
+        }
+        </script>
+        </HEAD>
+        <BODY onload="sub( )"> To see the o/p in pop up box:
+        </BODY>
+        6
+        </HTML>-->
+
+        <!-- ex-6 
+
+<!DOCTYPE html>
+<html>
+    <script src=”angular.min.js”></script>
+    <body ng-app="myApp" ng-controller="myCtrl">
+        <h1 ng-repeat="x in records">{{x}}</h1>
+        <script>
+            var app = angular.module("myApp", []);
+            app.controller("myCtrl", function($scope) 
+            {
+                $scope.records = ["Alfreds Futterkiste", "Berglunds snabbköp","Centro comercMoctezuma","Ernst Handel", ]});
+        </script>
+    </body>
+</html>-->
+
+<!-- ex-7 
+
+<!DOCTYPE html>
+<html ng-app="evenOddApp">
+<head>
+  <script src="angular.min.js"></script>
+</head>
+<body>
+    <div ng-controller="EvenOddController">
+        <label for="numberInput">Enter a number:</label>
+        <input type="number" id="numberInput" ng-model="inputNumber" ng-change="checkEvenOdd()">
+        <p ng-if="result !== undefined">Result: {{ result }}</p>
+    </div>
+    <script>
+    angular.module('evenOddApp', [])
+        .controller('EvenOddController', function($scope) {
+        $scope.checkEvenOdd = function() {
+            if ($scope.inputNumber % 2 === 0) {
+            $scope.result = 'Even';
+            } else {
+            $scope.result = 'Odd';
+            }
+        };
+        });
+    </script>
+</body>
+ </html> -->
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTech Student Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<style>
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    text-align: right;
+}
+.logo{
+    text-align: left;
+    
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.menu li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 2.0s;
+}
+
+.menu li a:hover {
+    color: #f7df1e; /* Change to your preferred hover color */
+}
+
+.logo {
+    margin: 0;
+}
+
+/* Section Styles */
+.section {
+    padding: 50px 0;
+    top: 30px;
+}
+#about{
+    margin-top: 30px;
+}
+
+/* Project Styles */
+.project {
+    margin-bottom: 20px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+/* Responsive Navigation Styles */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .menu {
+        display: none;
+        text-align: center;
+    }
+
+    .menu li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .toggle-menu {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #fff;
+        font-size: 20px;
+    }
+}
+</style>
+<body>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="container">
+            <h1 class="logo">Portfolio</h1>
+            <ul class="menu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="toggle-menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>
+                Insert your introduction here. Briefly describe your background, interests, and career aspirations.
+            </p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Project Title 1</h3>
+                <p>Description of project 1.</p>
+                <!-- Add more projects as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML/CSS</li>
+                <li>JavaScript</li>
+                <li>Python</li>
+                <!-- Add more skills as needed -->
+            </ul>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="section">
+        <div class="container">
+            <h2>Resume</h2>
+            <p>Provide a link to download your resume.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>Contact information goes here. You can include an email address or a contact form.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Your Name</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Responsive Navigation -->
+    <script src="script.js">
+        // JavaScript for Responsive Navigation
+    const toggleMenuBtn = document.querySelector('.toggle-menu');
+    const menu = document.querySelector('.menu');
+
+    toggleMenuBtn.addEventListener('click', () => {
+    menu.classList.toggle('active');
+});
+    </script>
+</body>
+</html>
+

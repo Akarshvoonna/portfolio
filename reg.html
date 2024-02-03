@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <title>login</title>
+        <script type="text/javascript">
+            function validate() {
+                var n=document.myform.name.value;
+                if(n=="" (!isNaN(parseInt(n)) ||n.lenght<3 || n.lenght>=8))
+                    {
+                        alert("please enter valid name and minimum lenght 3 characters and maximum lenght 8 characters" );
+                        document.myform.name.focus();
+                        return false;
+                    }
+                    var emailID=document.myform.email.value;
+                    if(emailID=="")
+                    {
+                        alert("please provide your email");
+                        document.myform.email.focus();
+                        return false;
+                    }
+                    atpos=emailID.indexOf("@");
+                    dotpos=emailID.lastIndexOf(".");
+                    if(atpos<1 || (dotpos=atpos<2))
+                    {
+                        alert("please provide valid emialID");
+                        document.myform.emailID.focus();
+                        return false;
+                    }
+                    var z=document.myform.zip.value;
+                    if(z=="" || isNaN(z) ||z.lenght!=6)
+                    {
+                        alert("please provide a zip in the format ######");
+                        document.myform.zip.focus();
+                        return false;
+                    }
+                    var c=document.myform.country.value;
+                    if(c=="-1")
+                    {
+                        alert("please provide your country name");
+                        return false;
+                    }
+                    return true;
+                
+            }
+        </script>
+    </head>
+    <style>
+        button{
+            width: 150px;
+            color: white;
+            background-color: black;
+            border-radius: 3px;
+            padding:10px;
+        }
+    </style>
+    <body >
+        <form id="myform">
+    <table align="center" border="0" cellspacing="20"> 
+        <tr >
+            <td align="center" colspan="2">
+                <h1>LOGIN PAGE</h1>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="name">name</label></td>
+                <td><input type="text" name="name" id="name" placeholder="user name" size="30" required  >
+            </td>
+        </tr>
+        <tr>
+            <td>
+                    <label for="name">emailID</label></td>
+                    <td><input type="text" name="email" id="emailID" placeholder="email" id="email" size="30" required >
+                </td>
+        </tr>
+        <tr>
+            <td>
+                    <label for="name">zip code</label></td>
+                    <td><input type="number" name="zip" placeholder="zip code" id="zip" size="30" required >
+                </td>
+        </tr>
+        <tr>
+        <td>
+            <select id="country">
+            <option id="-1">select country</option>
+            <option id="1">India</option>
+            <option id="1">USA</option>
+            <option id="1">Austrila</option>
+            <option id="1">UK</option>
+            </select>
+        </td>
+        </tr>
+        <tr>
+            <td colspan="4" align="center" width="100px">
+             <div >
+                <button >submit</button>
+             </div>
+            </td>
+        </tr>
+    </form>
+
+    </table>
+    </body>
+    
+</html>

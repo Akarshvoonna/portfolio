@@ -1,0 +1,285 @@
+*{
+    color:whitesmoke;
+    background-color:black;
+    scroll-behavior: smooth;
+ }
+ .name span{
+    color: #ff7300;
+ }
+ .header span{
+    color: #ff7300;
+
+ }
+ .projects span{
+    color: #ff7300;
+
+ }
+ .me span{
+    color:#ff7300
+ }
+ .navbar{
+    width: 100%;
+    background: transparent;
+    margin-top: -35;
+    position: fixed;
+ }
+.name{
+    display: flex;
+    margin-top: 20px;
+    font-family:lucida handwriting;
+    /* margin-left: 30px; */
+    text-align: left;
+}
+.nav{
+    display: flex;
+    gap: 30px;
+    margin-left: 800px;
+    font-size: 20px;
+    font-family:sans-serif;
+    transition: color 2.0s;
+    
+
+}   
+.nav a:hover{
+    color: #f7df1e;
+    transition: color 1.0s;
+
+}
+.intro{
+    background-repeat: no-repeat;
+    padding: 100px;
+    background-color:black;
+}
+.pic{
+    display: flex;
+    padding: 0px;
+    padding-top: -50px;
+    float: right;
+    margin-bottom: 90px;
+}
+ .resume{
+    margin-top: -150px;
+} 
+
+.me{
+    display: flex;
+    margin-top: 150px;
+    font-size:40px;
+    margin-left: 0px;
+   font-family:sans-serif; 
+}
+.header{
+    margin-top: 100px;
+    
+}
+.features{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    outline: none;
+
+}
+
+.features .card{
+    background-color:black;
+    padding: 1rem;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.features .card:hover{
+    background-color:#f7df1e;
+    border-color: #fff;
+}
+
+.features .card span{
+    display: inline-block;
+    background-color: #1e40af;
+    padding: 2px 9px;
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.features .card h4{
+    margin-bottom: 0.5rem;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.features .card p{
+    color: #ccc;
+    margin-bottom: 1rem;
+}
+
+.features .card a{
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.features .card a:hover{
+    color: #1e40af;
+}
+
+
+/* .abo{
+    padding: 100px;
+    background-color: #042233;
+    transition: 1.5s;
+}
+.about{ 
+    margin-top: 0px;
+    display: flex;
+    font-size: 20px;
+}
+.abtme{
+    padding: 30px;
+    display: flex;
+    padding-top: 20px;
+    margin:right;
+}
+.aboutme{
+    display: flex;
+} */
+
+.projects{
+    margin-top: 200;
+    font-size: 30px;
+    text-align: center;
+}
+.color{
+    background-color:black;
+
+}
+.img1{
+    padding: 30px;
+    display: flex;
+    border-radius: 10px;
+    background-color:black;
+    gap: 50px;
+}
+.img1 a:hover{
+    transform: translateY(-10px) ;
+    transition: 0.5s;
+
+}
+.img2{
+    padding: 30px;
+    display: flex;
+    background-color:black;
+    gap: 100px;
+}
+.img2 a:hover{
+    transform: translateY(-10px) ;
+    transition: 0.5s;
+}
+.inputs{
+	width: 400px;
+	height: 50px;
+	border: none;
+	outline: none;
+	padding-left: 25px;
+	font-weight: 25px;
+	color: grey;
+    background-color: white;
+	border-radius: 50px;
+}
+.con-textarea{
+	height: 140px;
+	padding-top: 15px;
+	border-radius: 20px;
+}
+
+/* .table{
+    gap:30px;
+    margin-bottom: 10px;
+} */
+
+.button-85 {
+    display: flex;
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-85:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button-85:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+ .apps{ 
+    margin-left: 50px; 
+    display: flex;
+    text-decoration: none;
+    gap: 50px;
+    text-align:right;
+}
+.apps a:hover{
+    background-color:black;
+}
+.con{
+    padding: 60px;
+    background-color:black;
+}
+.container{
+    text-align: center;
+}
